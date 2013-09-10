@@ -3,6 +3,8 @@
 
 Add slugs to your data.
 
+[![build status](https://secure.travis-ci.org/juliangruber/level-slug.png)](http://travis-ci.org/juliangruber/level-slug)
+
 ## Example
 
 ```js
