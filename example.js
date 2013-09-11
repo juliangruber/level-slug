@@ -1,9 +1,10 @@
 var level = require('level');
 var withSlug = require('./');
+var sub = require('level-sublevel');
 
-var db = level(__dirname + '/db', {
+var db = sub(level(__dirname + '/db', {
   valueEncoding: 'json'
-});
+}));
 withSlug('title', db);
 
 db.put('post1', {

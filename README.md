@@ -9,19 +9,22 @@ Add slugs to your data.
 
 ```js
 var level = require('level');
+var sub = require('level-sublevel');
 var withSlug = require('level-slug');
 
-var db = level(__dirname + '/db', {
+var db = sub(level(__dirname + '/db', {
   valueEncoding: 'json'
-});
+}));
 withSlug('title', db);
 
 db.put('post1', {
   title: 'a little post!'
 }, function(err) {
   if (err) throw err;
+
   db.get('post1', function(err, value) {
     if (err) throw err;
+
     console.log(value);
     // => {
     //      title: 'a little post!',
@@ -37,6 +40,10 @@ db.put('post1', {
 
 For every record created or updated, make sure it has a `slug` created
 from `prop`.
+
+`db` needs to have
+[level-sublevel](https://github.com/dominictarr/level-sublevel) installed
+on it.
 
 ## Installation
 
