@@ -1,7 +1,7 @@
 {
   "name": "level-slug",
   "description": "Add slugs to your data",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/juliangruber/level-slug.git"
