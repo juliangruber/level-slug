@@ -12,12 +12,11 @@
     "test": "tape test.js"
   },
   "dependencies": {
-    "slugg": "0.1.x",
-    "level-hooks": "~4.4.4"
+    "slugg": "~0.1.2"
   },
   "devDependencies": {
-    "tape": "1.4.x",
-    "level": "0.15.x",
+    "tape": "~1.1.0",
+    "level": "~0.16.0",
     "level-sublevel": "~5.1.1"
   },
   "keywords": [
